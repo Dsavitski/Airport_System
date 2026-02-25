@@ -1,10 +1,13 @@
 package com.example.demo.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.stereotype.Component;
+import lombok.NoArgsConstructor;
 
-@Component
+
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class FlightDto {
     private String flightId;
     private String destination;
