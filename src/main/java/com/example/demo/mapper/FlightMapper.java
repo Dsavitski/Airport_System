@@ -11,9 +11,9 @@ public class FlightMapper {
             return null;
         }
         return new FlightDto(
-                flight.getFlightNumber(),
-                flight.getDestination(),
-                flight.getStatus()
+            flight.getFlightNumber(),
+            flight.getDestination(),
+            flight.getStatus()
         );
     }
 }

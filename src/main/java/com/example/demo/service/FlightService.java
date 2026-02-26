@@ -18,9 +18,11 @@ public class FlightService {
     public FlightDto getById(Long id) {
         return flightRepository.findById(id).map(flightMapper::toDto).orElse(null);
     }
+
     public List<FlightDto> getByStatus(String status) {
-        return flightRepository.findAll().stream().filter(flight -> flight.getStatus().equalsIgnoreCase(status)).
-                map(flightMapper::toDto).toList();
+        return flightRepository.findAll().stream().filter(
+                flight -> flight.getStatus().equalsIgnoreCase(status)).
+            map(flightMapper::toDto).toList();
     }
 
 

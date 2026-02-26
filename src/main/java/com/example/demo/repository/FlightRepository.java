@@ -4,8 +4,6 @@ package com.example.demo.repository;
 import com.example.demo.entities.Flight;
 import org.springframework.stereotype.Repository;
 
-
-
 import java.util.List;
 import java.util.Optional;
 
@@ -14,18 +12,18 @@ import java.util.Optional;
 public class FlightRepository {
 
     private final List<Flight> flights = List.of(
-            new Flight(1L,"1","Minsk","On time"),
-            new Flight(2L,"2","Vitebsk","On time"),
-            new Flight(3L,"3","Brest","On time")
+        new Flight(1L, "1", "Minsk", "On time"),
+        new Flight(2L, "2", "Vitebsk", "On time"),
+        new Flight(3L, "3", "Brest", "On time")
     );
 
 
-    public Optional<Flight> findById(Long id){
+    public Optional<Flight> findById(Long id) {
         return flights.stream().filter(f -> f.getId().equals(id))
-                .findFirst();
+            .findFirst();
     }
 
-    public List<Flight> findAll(){
+    public List<Flight> findAll() {
         return flights;
     }
 }
